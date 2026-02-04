@@ -1,7 +1,46 @@
 [project]
-name = "project-chimera-the-agentic-infrastructure-challenge"
-version = "0.1.0"
-description = "Add your description here"
+name = "project-chimera-agentic-infrastructure"
+version = "0.1.0"  # Early prototype stage
+description = "Spec-first infrastructure foundation for Project Chimera — an agentic autonomous influencer system. Not yet a runnable application."
 readme = "README.md"
 requires-python = ">=3.12"
+license = {text = "MIT"}  # change if you use a different license
+keywords = ["agentic-ai", "ai-infrastructure", "multi-agent", "spec-driven", "test-first", "governance"]
+authors = [{name = "Eyuel", email = "your-email@example.com"}]  # optional but recommended
+
+# Intentionally empty → no runtime dependencies yet
 dependencies = []
+
+# Optional: classifiers help people understand the project status
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+]
+
+[build-system]
+# If you're not using Poetry yet → use this minimal setuptools version (very common)
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Alternative: if you plan to switch to Poetry later (recommended for modern projects)
+# [tool.poetry]
+# name = "project-chimera-agentic-infrastructure"
+# version = "0.1.0"
+# description = "..."
+# authors = ["Eyuel Semeon eyuel.semeon@gmail.com>"]
+# readme = "README.md"
+# requires-python = ">=3.12"
+# packages = []  # no packages yet
+
+[tool.pytest.ini_options]   # optional but very useful since you have tests/
+addopts = "--strict-markers --doctest-modules --tb=short"
+testpaths = ["tests"]
+markers = [
+    "unit",
+    "integration",
+    "slow",
+]
