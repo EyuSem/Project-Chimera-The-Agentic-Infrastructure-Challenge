@@ -1,0 +1,6 @@
+review:
+  instructions: |
+    - Verify alignment with specs/ before approving code
+    - Flag any direct API calls not using MCP
+    - Highlight missing tests
+    - Watch for security or cost risks
