@@ -1,4 +1,6 @@
 # Project Chimera – Agentic Infrastructure Challenge
+```markdown
+[![CI](https://github.com/EyuSem/Project-Chimera-The-Agentic-Infrastructure-Challenge/actions/workflows/main.yml/badge.svg)](https://github.com/EyuSem/Project-Chimera-The-Agentic-Infrastructure-Challenge/actions/workflows/main.yml)
 
 ## Overview
 This repository is a **spec-driven foundation** for Project Chimera,
