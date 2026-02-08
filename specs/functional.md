@@ -49,3 +49,20 @@ So that engagement remains active.
 As an Agent,
 I need to execute on-chain transactions
 So that I can operate as an economic actor.
+
+## User Stories with Acceptance Criteria
+
+- As an Autonomous Agent, I need to fetch trends via MCP Resources so I can create relevant content.
+  - AC1: Input: niche (str), location (str optional). Output: list of topics with sources (JSON array).
+  - AC2: Handles API timeouts with retry (up to 3x).
+  - AC3: Relevance score > 0.75 triggers Planner task (SRS FR 2.1).
+
+- As an Agent, I need to generate images consistent with my persona so followers recognize me.
+  - AC1: Input: prompt (str), character_reference_id (str). Output: image_url (str).
+  - AC2: Judge validates consistency via Vision LLM (e.g., "YES/NO match" > 90% confidence).
+  - AC3: Escalates low-confidence to HITL (SRS NFR 1.0).
+
+- As a Planner, I need to decompose goals into tasks for Workers.
+  - AC1: Input: goal (str). Output: DAG of tasks (JSON graph).
+  - AC2: Reactive re-planning on state changes (SRS 3.1.1).
+  - AC3: Integrates with TaskQueue (Redis).
